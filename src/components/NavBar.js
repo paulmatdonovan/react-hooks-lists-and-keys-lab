@@ -2,11 +2,14 @@ import React from "react";
 
 function NavBar() {
   const links = ["home", "about", "projects"];
-  const navList = links.map((link) => {
-    return <a key={link} href={link}>{link}</a>
-  })
 
-  return <nav>{navList}</nav>;
+  const anchors = links.map((link) =>
+  (<a key={link} href={"#" + link}> {link}
+  </a>
+  ))
+
+  return <nav>{anchors}</nav>
+
 }
 
 export default NavBar;
